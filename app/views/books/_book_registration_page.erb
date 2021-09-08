@@ -1,0 +1,13 @@
+<div class="book_registration_form">
+  <div class="book_registration_subject">新しい本を登録しましょう！</div>
+  <%=form_with model: "@###", local: true do |f|%>
+    <div class="book_name_registration_form">
+      <div class="book_name_registration_form_left">
+        <%= f.label :本の題名, class: 'book_name_form_label'%>
+      </div>
+      <div class="book_name_registration_form_right">
+        <%= f.text_field :name, class: 'book_name_form_input'%>
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,49 @@
+<div class="top_page_contents">
+  <div class="book_content">
+    <div class="content_image">
+      <%= link_to image_tag("/images/book.png" )  , books_path  %>
+      <div class="content_subject">
+        <%= link_to "本棚", books_path, class: "content_name" %>
+      </div>
+    </div>
+  </div>
+  <div class="book_content">
+    <div class="content_image">
+      <%= link_to image_tag("/images/book.png" )  , new_book_path  %>
+      <div class="content_subject">
+        <%= link_to "本の登録", new_book_path, class: "content_name" %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="top_page_contents">
+  <div class="book_content">
+    <div class="content_image">
+      <%= link_to image_tag("/images/book.png" )  , root_path  %>
+      <div class="content_subject">
+        <%= link_to "グラフ", root_path, class: "content_name" %>
+      </div>
+    </div>
+  </div>
+  <div class="book_content">
+    <div class="content_image">
+      <%= link_to image_tag("/images/book.png" )  , root_path  %>
+      <div class="content_subject">
+        <%= link_to root_path, class: "content_name" do %>
+          読んだ絵本<br>ランキング
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="book_content">
+    <div class="content_image">
+      <%= link_to image_tag("/images/book.png" )  , root_path  %>
+      <div class="content_subject">
+        <%= link_to root_path, class: "content_name" do %>
+          読んだジャンル<br>ランキング
+        <% end %>      
+      </div>
+    </div>
+  </div>
+</div>

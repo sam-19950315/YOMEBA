@@ -1,0 +1,39 @@
+.top_page {
+  background-color: #795548; 
+  width: 100vw;
+  height: 85vh;
+ }
+
+
+.top_page_contents {
+  display: flex;
+  justify-content: space-around;
+}
+
+.content_image {
+  position: relative;
+}
+
+
+.content_subject {
+  width: 13vw;
+  height: 15vh;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
+  font-size: 1.5rem;
+  color: white;
+  background-color:#5D4037 ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content_name {
+font-size: 1.9rem;
+}

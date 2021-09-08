@@ -1,0 +1,138 @@
+.headder {
+  background-color: #5D4037;
+  width: 100vw;
+  height: 15vh;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.book_list {
+ background-color: #795548; 
+ width: 100vw;
+ height: 85vh;
+ padding-top: 46px;
+ overflow: scroll;
+}
+
+.headder_left_content {
+  background-color: #FFC107;
+  width: 20vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headder_right_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 15vw;
+}
+
+.headder_logo {
+
+  font-size: 4.3rem;
+}
+
+.logout {
+  background-color: #FFC107;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+}
+
+.headder_logout_button {
+  font-size: 1.5rem;
+  margin: 0 5px;
+  padding: 2px;
+}
+
+.user_icon {
+  background-color: white;
+  height: 10vh;
+}
+
+.headder_icon {
+  width: 6.5vw;
+  height: 10vh;
+}
+
+.book_contents_line {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 150px;
+}
+
+.book_image {
+  position: relative;
+}
+
+.book_subject {
+  width: 11vw;
+  position: absolute;
+  top: 30%;
+  left: 47%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
+  font-size: 1.5rem;
+  color: white;
+  background-color:#5D4037 ;
+}
+
+.book_count_space {
+  display: flex;
+  justify-content: space-around;
+}
+
+.book_count_result {
+  width: 5vw;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.count_result {
+
+ color: white;
+ font-size: 3rem;
+}
+
+.count_button {
+  width: 3vw;
+  height: 7vh;
+}
+
+
+.book_registration_page {
+  background-color: #795548; 
+  width: 100vw;
+  height: 85vh;
+  padding-top: 46px;
+}
+
+.book_registration_form {
+  width: 80vw;
+  height: 65vh;
+  margin: 60px auto;
+  padding: 40px;
+  background-color:#5D4037;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+.book_registration_subject {
+  color: white;
+  font-size: 3rem;
+}
+
+.book_name_registration_form {
+  display: flex;
+  justify-content: space-between;
+}

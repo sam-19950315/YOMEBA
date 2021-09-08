@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  root to: "books#index"
+  root to: "toppages#index"
+  resources :books , only: [:index]
 end

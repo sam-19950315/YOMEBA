@@ -107,3 +107,32 @@
   width: 3vw;
   height: 7vh;
 }
+
+
+.book_registration_page {
+  background-color: #795548; 
+  width: 100vw;
+  height: 85vh;
+  padding-top: 46px;
+}
+
+.book_registration_form {
+  width: 80vw;
+  height: 65vh;
+  margin: 60px auto;
+  padding: 40px;
+  background-color:#5D4037;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+.book_registration_subject {
+  color: white;
+  font-size: 3rem;
+}
+
+.book_name_registration_form {
+  display: flex;
+  justify-content: space-between;
+}

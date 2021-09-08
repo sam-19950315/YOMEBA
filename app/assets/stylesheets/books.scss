@@ -3,6 +3,8 @@
   width: 100vw;
   height: 15vh;
   padding: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .book_list {
@@ -10,4 +12,51 @@
  width: 100vw;
  height: 85vh;
  padding-top: 46px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+.headder_left_content {
+  background-color: #FFC107;
+  width: 20vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headder_right_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 15vw;
+}
+
+.headder_logo {
+
+  font-size: 4.3rem;
+}
+
+.logout {
+  background-color: #FFC107;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+}
+
+.headder_logout_button {
+  font-size: 1.5rem;
+  margin: 0 5px;
+  padding: 2px;
+}
+
+.user_icon {
+  background-color: white;
+  height: 10vh;
+}
+
+.headder_icon {
+  width: 6.5vw;
+  height: 10vh;
 }

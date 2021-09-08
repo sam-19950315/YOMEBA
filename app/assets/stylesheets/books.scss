@@ -12,9 +12,7 @@
  width: 100vw;
  height: 85vh;
  padding-top: 46px;
- display: flex;
- justify-content: space-between;
- align-items: center;
+ overflow: scroll;
 }
 
 .headder_left_content {
@@ -59,4 +57,53 @@
 .headder_icon {
   width: 6.5vw;
   height: 10vh;
+}
+
+.book_contents_line {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 150px;
+}
+
+.book_image {
+  position: relative;
+}
+
+.book_subject {
+  width: 11vw;
+  position: absolute;
+  top: 30%;
+  left: 47%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
+  font-size: 1.5rem;
+  color: white;
+  background-color:#5D4037 ;
+}
+
+.book_count_space {
+  display: flex;
+  justify-content: space-around;
+}
+
+.book_count_result {
+  width: 5vw;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.count_result {
+
+ color: white;
+ font-size: 3rem;
+}
+
+.count_button {
+  width: 3vw;
+  height: 7vh;
 }

@@ -1,0 +1,28 @@
+<div class="headder">
+  <div class="headder_left_content">
+    <%= link_to "YOMEBA", root_path, class: "headder_logo" %>
+  </div>
+</div>
+
+<div class="sign_in_space">
+  <div class="sign_in_box">
+    <h2 class="sign_in_user_name_top">サインイン</h2>
+
+    <%= form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f| %>
+      
+      <div class="field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password %><br>
+        <%= f.password_field :password, autocomplete: "new-password" %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "Sign in" %>
+      </div>
+    <% end %>
+  </div>
+</div>

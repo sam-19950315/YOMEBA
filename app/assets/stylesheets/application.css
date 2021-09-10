@@ -23,3 +23,16 @@ a {
   text-decoration:none; 
   color: #FFFFFF;
 }
+
+.notification {
+  position: absolute;
+  top: 7%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
+  color: red;
+  font-size: 2rem;
+}

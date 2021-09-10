@@ -4,4 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   mount_uploader :image, ImageUploader
+
+  belongs_to :genre
+  has_many :books
+  has_many :read_book_logs
 end

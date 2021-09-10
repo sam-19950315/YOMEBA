@@ -2,18 +2,23 @@
   <%= link_to "YOMEBA", root_path, class: "headder_logo" %>
 </div>
 <div class="headder_right_content">
-  <div class="logout">
-    <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "headder_logout_button" %>
-  </div>
-  <div class="user_icon">
-    <% if user_signed_in? %>
+  <% if user_signed_in? %>
+    <div class="logout">
+      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "headder_logout_button" %>
+    </div>
+    <div class="user_icon">
       <% if current_user.image.presence %>
         <a href="/users/edit"><img src=<%= current_user.image %> class = "user_icon"></a>
       <% else %>
         <%= link_to image_tag("/images/animal_stand_penguin.png", class: 'user_icon' )  , edit_user_registration_path  %>
       <% end %>
-    <% else %>
-      <%= link_to image_tag("/images/animal_stand_penguin.png", class: 'user_icon' )  , edit_user_registration_path  %>
-    <% end %>
-  </div>
+    </div>
+  <% else %>
+      <div class="login">
+        <%= link_to "ログイン", new_user_session_path, class: "headder_login_button" %>
+      </div>
+      <div class="sign_up">
+        <%= link_to "サインアップ", new_user_registration_path, class: "sign_up_button" %>
+      </div>
+  <% end %>
 </div>

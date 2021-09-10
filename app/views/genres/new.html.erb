@@ -1,0 +1,17 @@
+<div class="headder">
+  <%= render "books/headder" %>
+</div>
+
+<div class="genre_registration_space">
+  <div class="genre_registration_box">
+    <h2 class="genre_registration_name_top">本のジャンル登録</h2>
+    <%= form_with(model: @genre, local: true) do |form| %>
+      <div class="genre_name_registration_box">
+        <%= form.text_field :genre_name , class: "genre_input_size", placeholder: "本のジャンル名" %>
+      </div>
+      <div class="genre_name_registration_submit">
+        <%= form.submit  "登録" , class: "genre_name_submit"%>
+      </div>
+    <% end %>
+  </div>
+</div>

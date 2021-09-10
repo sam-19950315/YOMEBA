@@ -1,0 +1,30 @@
+.edit_user_info {
+  background-color: #795548;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit_user_info_space {
+  border: 4px solid #5D4037;
+  width: 50vw;
+  height: 80vh;
+  text-align: center;
+}
+
+.edit_user_top {
+  color: white;
+  font-size: 2rem;
+  background-color: #5D4037;
+}
+
+.edit_user_comment {
+  color: white;
+}
+
+.cancel_account {
+  position: absolute;
+  left: 90vw;
+  top: 90vh;
+}

@@ -9,6 +9,9 @@
               <div class="book_subject">
                 <%= book.book_subject %>
               </div>
+              <div class="book_destroy">
+                <%= link_to '削除', book_path(book.id), method: :delete %>
+              </div>
             </div>
             <div class="book_count_space">
               <div class="count_button_minus">

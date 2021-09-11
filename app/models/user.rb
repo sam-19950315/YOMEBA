@@ -5,5 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   mount_uploader :image, ImageUploader
 
-  belongs_to :genre, optional: true
+  belongs_to :genre, optional: true, dependent: :destroy
+  has_many :books, dependent: :destroy
+  
+
+
 end

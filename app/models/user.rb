@@ -7,6 +7,7 @@ class User < ApplicationRecord
 
   belongs_to :genre, optional: true, dependent: :destroy
   has_many :books, dependent: :destroy
+  has_many :read_book_logs, dependent: :destroy
   
 
 

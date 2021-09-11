@@ -1,13 +1,17 @@
-<div class="book_registration_form">
-  <div class="book_registration_subject">新しい本を登録しましょう！</div>
-  <%=form_with model: "@###", local: true do |f|%>
-    <div class="book_name_registration_form">
-      <div class="book_name_registration_form_left">
-        <%= f.label :本の題名, class: 'book_name_form_label'%>
-      </div>
-      <div class="book_name_registration_form_right">
-        <%= f.text_field :name, class: 'book_name_form_input'%>
-      </div>
+
+<div class="book_registration_box">
+  <h2 class="book_registration_name_top">新しい本の登録</h2>
+  <%= form_with(model: @book, local: true) do |form| %>
+    <div class="book_name_registration_box">
+      <%= form.text_field :book_subject , class: "book_input_size", placeholder: "本のタイトル" %>
+    </div>
+
+    <div class="book_genre_registration_box">
+      <%= form.select :genre_id, Genre.where(user_id: current_user.id).map{ |genre| [genre.genre_name, genre.id]} %>
+    </div>
+
+    <div class="book_name_registration_submit">
+      <%= form.submit  "登録" , class: "book_name_submit"%>
     </div>
   <% end %>
 </div>

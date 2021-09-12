@@ -17,9 +17,9 @@
               <div class="count_button_minus">
                 <img src="/images/minus.png" alt="マイナスボタン" title="マイナスボタン" class="count_button">
               </div>
-              <div class="book_count_result"><h1 class="count_result">5回</h1></div>
+              <div class="book_count_result"><h1 class="count_result"><%= book.read_book_logs.count %></h1></div>
               <div class="count_button_plus">
-                <img src="/images/plus.png" alt="プラスボタン" title="プラスボタン" class="count_button">
+                <%= link_to image_tag("/images/plus.png", class: 'count_button' )  , create_read_book_log_path(book.id), method: :POST %>
               </div>
             </div>
           </div>

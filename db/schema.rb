@@ -28,10 +28,8 @@ ActiveRecord::Schema.define(version: 2021_09_11_141901) do
   end
 
   create_table "read_book_logs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.date "read_day"
     t.integer "user_id"
     t.integer "book_id"
-    t.integer "genre_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

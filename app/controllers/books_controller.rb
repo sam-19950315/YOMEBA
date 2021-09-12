@@ -10,7 +10,22 @@ class BooksController < ApplicationController
   end
 
   def create
+<<<<<<< Updated upstream
     book = Book.create(book_params)
+=======
+    @book = Book.new(book_params)
+    if @book.save
+      redirect_to root_path
+    else  
+      flash.now[:error_book] = "タイトル、ジャンルは必須です。"
+      render :new
+    end
+  end
+
+  def destroy
+    book = Book.find(params[:id])
+    book.destroy
+>>>>>>> Stashed changes
     redirect_to root_path
   end
 

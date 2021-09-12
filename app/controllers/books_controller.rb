@@ -10,7 +10,13 @@ class BooksController < ApplicationController
   end
 
   def create
-    book = Book.create(book_params)
+    @book = Book.new(book_params)
+    if @book.valid?
+      @book.save
+      flash.now[:notice] = "登録が完了しました。"
+    else  
+      flash.now[:notice] = "タイトル、ジャンルは必須です。"
+    end
     redirect_to root_path
   end
 

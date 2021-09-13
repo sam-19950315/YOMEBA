@@ -1,4 +1,6 @@
 class ReadBookLogsController < ApplicationController
+  before_action :authenticate_user!, only: [:create, :book_ranking]
+
   def create
     ReadBookLog.create(user_id: current_user.id, book_id: params[:id])
     redirect_to books_path
@@ -19,5 +21,5 @@ class ReadBookLogsController < ApplicationController
   end
 
 
-  
+
 end

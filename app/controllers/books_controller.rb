@@ -1,4 +1,5 @@
 class BooksController < ApplicationController
+  before_action :authenticate_user!, only: [:index, :new, :create, :destroy, :trash]
 
   def index
     @books = Book.where(user_id: current_user.id)
@@ -25,9 +26,15 @@ class BooksController < ApplicationController
     redirect_to root_path
   end
 
+  def trash
+    book = Book.find(params[:id])
+    book.update(is_deleted: true)
+    redirect_to root_path
+  end
+
   private
   def book_params
-    params.require(:book).permit(:book_subject,:genre_id).merge(user_id: current_user.id)
+    params.require(:book).permit(:book_subject,:genre_id,:is_deleted).merge(user_id: current_user.id)
   end
   
 end

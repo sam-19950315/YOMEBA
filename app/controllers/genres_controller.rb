@@ -1,4 +1,5 @@
 class GenresController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create]
   def new
     @genre = Genre.new
   end

@@ -17,19 +17,19 @@
         <%= '読んだ回数' %>
       </div>
     </div>
-    <% @books.each_with_index do |book,i| %>
+    <% @read_book_logs.each_with_index do |book,i| %>
       <div class="book_ranking_content_box">
         <div class="book_ranking_content_rank">
           <%= "#{i+1}位"%>
         </div>
         <div class="book_ranking_content_detail">
-          <%= book[1] %>
+          <%= book[0][0] %>
         </div>
         <div class="book_ranking_content_detail">
-          <%= @genre[book[2]].genre_name %>
+          <%= book[0][1] %>
         </div>
         <div class="book_ranking_content_detail">
-          <%= "#{book[0]}回" %>
+          <%= "#{book[1]}回" %>
         </div>
       </div>
     <% end %>

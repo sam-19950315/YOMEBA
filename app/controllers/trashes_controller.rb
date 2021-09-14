@@ -1,5 +1,4 @@
 class TrashesController < ApplicationController
-
   before_action :authenticate_user!, only: [:index, :reverse]
 
   def index

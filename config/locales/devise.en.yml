@@ -63,13 +63,3 @@ en:
       not_saved:
         one: "1 error prohibited this %{resource} from being saved:"
         other: "%{count} errors prohibited this %{resource} from being saved:"
-
-en:  
-  devise:  
-    failure:  
-      deleted_account: "You've deleted your account. Thanks!" 
-
-ja:
-  devise:  
-    failure:  
-      deleted_account: "このアカウントは既に削除されています。" 

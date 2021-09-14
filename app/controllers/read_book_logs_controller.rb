@@ -16,7 +16,8 @@ class ReadBookLogsController < ApplicationController
   end
 
   def graph
-    @datas = ReadBookLog.where(user_id: current_user.id).select(:log,:created_at)
+    @datas = ReadBookLog.where(user_id: current_user.id).select(:log).group("read_book_logs.log").count.first(30)
+
   end
 
 end

@@ -1,5 +1,6 @@
 class TrashesController < ApplicationController
-  before_action :authenticate_user!, only: [:index, :trash_reverse]
+
+  before_action :authenticate_user!, only: [:index, :reverse]
 
   def index
     @books = Book.where(user_id: current_user.id, is_deleted: true)

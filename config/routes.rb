@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   post 'read_book_log/:id' => 'read_book_logs#create', as: 'create_read_book_log'
   get 'read_book_log' => 'read_book_logs#genre_ranking', as: 'index_genre_ranking'
+  get 'read_book_log_graph' => 'read_book_logs#graph', as: 'index_graph'
   post 'books/:id' => 'books#trash', as: 'trash_book'
   post 'trashes/:id' => 'trashes#reverse', as: 'trash_reverse'
 end

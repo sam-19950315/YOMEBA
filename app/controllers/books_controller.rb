@@ -32,6 +32,17 @@ class BooksController < ApplicationController
     redirect_to root_path
   end
 
+  def trashes_box
+    @books = Book.where(user_id: current_user.id, is_deleted: true)
+  end
+
+  def recover_from_trashbox
+    book = Book.find(params[:id])
+    book.update(is_deleted: false)
+    redirect_to root_path
+  end
+
+
   private
 
   def book_params

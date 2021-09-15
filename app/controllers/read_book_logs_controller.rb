@@ -21,3 +21,5 @@ class ReadBookLogsController < ApplicationController
   end
 
 end
+
+#テスト

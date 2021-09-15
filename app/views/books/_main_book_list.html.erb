@@ -16,11 +16,20 @@
             </div>
             <div class="book_count_space">
               <div class="count_button_minus">
-                <img src="/images/minus.png" alt="マイナスボタン" title="マイナスボタン" class="count_button">
+                <img src="/images/minus.png" 
+                  alt="マイナスボタン" 
+                  title="マイナスボタン" 
+                  class="count_button"
+                >
               </div>
-              <div class="book_count_result"><h1 class="count_result"><%= book.read_book_logs.count %></h1></div>
+              <div class="book_count_result">
+                <h1 class="count_result"><%= book.read_book_logs.count %></h1>
+              </div>
               <div class="count_button_plus">
-                <%= link_to image_tag("/images/plus.png", class: 'count_button' )  , create_read_book_log_path(book.id), method: :POST %>
+                <%= link_to image_tag("/images/plus.png", class: 'count_button' )  , 
+                  create_read_book_log_path(book.id), 
+                  method: :POST 
+                %>
               </div>
             </div>
           </div>
@@ -29,7 +38,10 @@
     <% else %>
       <div class="book_content_first_time">
         <div class="book_image">
-          <img src="/images/book_cover.png" alt="絵本の表紙" title="絵本の表紙">
+          <img src="/images/book_cover.png" 
+            alt="絵本の表紙" 
+            title="絵本の表紙"
+          >
           <div class="book_subject">
             <%= "1冊目の本を" %><br>
             <%= "登録しよう！" %>
@@ -37,11 +49,21 @@
         </div>
         <div class="book_count_space">
           <div class="count_button_minus">
-            <img src="/images/minus.png" alt="マイナスボタン" title="マイナスボタン" class="count_button">
+            <img src="/images/minus.png" 
+              alt="マイナスボタン" 
+              title="マイナスボタン" 
+              class="count_button"
+            >
           </div>
-          <div class="book_count_result"><h1 class="count_result">5回</h1></div>
+          <div class="book_count_result">
+            <h1 class="count_result">0回</h1>
+          </div>
           <div class="count_button_plus">
-            <img src="/images/plus.png" alt="プラスボタン" title="プラスボタン" class="count_button">
+            <img src="/images/plus.png" 
+              alt="プラスボタン" 
+              title="プラスボタン" 
+              class="count_button"
+            >
           </div>
         </div>
       </div>

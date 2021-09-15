@@ -1,5 +1,6 @@
 class BooksController < ApplicationController
-  before_action :authenticate_user!, only: [:index, :new, :create, :destroy, :trash]
+  before_action :authenticate_user!, 
+    only: [:index, :new, :create, :destroy, :trash]
 
   def index
     @books = Book.where(user_id: current_user.id,is_deleted: false)
@@ -7,7 +8,6 @@ class BooksController < ApplicationController
 
   def new
     @book = Book.new
-
   end
 
   def create
@@ -33,8 +33,12 @@ class BooksController < ApplicationController
   end
 
   private
+
   def book_params
-    params.require(:book).permit(:book_subject,:genre_id,:is_deleted).merge(user_id: current_user.id)
+    params
+    .require(:book)
+    .permit(:book_subject,:genre_id,:is_deleted)
+    .merge(user_id: current_user.id)
   end
   
 end

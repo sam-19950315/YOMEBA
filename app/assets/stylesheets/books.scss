@@ -90,6 +90,7 @@
 
 .book_contents_line {
   display: flex;
+  justify-content: space-around;
   margin-bottom: 150px;
 }
 
@@ -110,13 +111,6 @@
   font-size: 1.5rem;
   color: white;
   background-color:#5D4037 ;
-  text-align: center;
-}
-
-.book_destroy {
-  position: absolute;
-  top: 70%;
-  left: 25%;
 }
 
 .book_count_space {
@@ -149,8 +143,6 @@
   width: 100vw;
   height: 85vh;
   padding-top: 46px;
-  display: flex;
-  justify-content: center;
 }
 
 .book_registration_form {
@@ -158,10 +150,10 @@
   height: 65vh;
   margin: 60px auto;
   padding: 40px;
+  background-color:#5D4037;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
-  border: 4px solid #5D4037;
 }
 
 .book_registration_subject {
@@ -173,66 +165,3 @@
   display: flex;
   justify-content: space-between;
 }
-
-.item_lists {
-  width: 100vw;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.item_list {
-  margin-left: 10vw;
-}
-
-.link_to_book_registration_space {
-  width: 100vw;
-  height: 85vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.book_content_first_time {
-  margin-left: 10vw;
-}
-
-
-
-
-.book_registration_box {
-  width: 50vw;
-  height: 60vh;
-  text-align: center;
-  border: 4px solid #5D4037;
-}
-
-.book_registration_name_top {
-  color: white;
-  font-size: 2rem;
-  background-color: #5D4037;
-}
-
-.book_name_registration_box {
-  margin-top: 10vh;
-}
-
-.book_input_size {
-  width: 40vw;
-  height: 10vh;
-  font-size: 1.7rem;
-}
-
-.book_name_registration_submit {
-  margin-top: 5vh;
-}
-
-.book_name_submit {
-  width: 10vw;
-  height: 5vh;
-}
-
-.select_tab {
-  margin-top: 50px;
-  height: 5vh;
-}
-

@@ -1,0 +1,76 @@
+.book_ranking_page, .graph {
+  background-color: #795548;
+  width: 100vw;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+}
+
+.book_ranking_space , .genre_ranking_space {
+  color: white;
+  border: 4px solid #5D4037;
+  margin-top: 30px;
+  height: 70vh;
+  overflow: scroll;
+}
+
+.book_ranking_space_top , .genre_ranking_space_top {
+  background-color: #5D4037;
+  width: 50vw;
+  height: 6vh;
+  font-size: 2.7rem;
+  text-align: center;
+}
+
+.book_ranking_content_box , .genre_ranking_content_box {
+  width: 50vw;
+  height: 8vh;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.book_ranking_content_rank, .genre_ranking_content_rank {
+  width:  10vw;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.book_ranking_content_detail, .genre_ranking_content_detail {
+  width: 15vw;
+  margin-left: 20px;
+  text-align: center;
+}
+
+.book_ranking_content_topic, .genre_ranking_content_topic {
+  width:  10vw;
+  text-align: center;
+  color: black;
+}
+
+.book_ranking_content_detail_topic, .genre_ranking_content_detail_topic {
+  width: 15vw;
+  margin-left: 20px;
+  text-align: center;
+  color: black;
+}
+
+.book_ranking_content_box_topic, .genre_ranking_content_box_topic {
+  width: 50vw;
+  height: 5vh;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  background-color: lightgray;
+  margin-top: 2vh;
+}
+
+.chart {
+  width: 100vw;
+  height: 70vh;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+

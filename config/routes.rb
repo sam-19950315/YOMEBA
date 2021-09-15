@@ -15,6 +15,8 @@ Rails.application.routes.draw do
     as: 'index_graph'
   post 'books/:id' => 'books#trash', 
     as: 'trash_book'
-  post 'trashes/:id' => 'trashes#reverse', 
-    as: 'trash_reverse'
+  get 'book_trashes_box' => 'books#trashes_box',
+    as: 'trashes_box'
+  post 'book_trashes_restore/:id' => 'books#recover_from_trashbox', 
+    as: 'trash_restore'
 end

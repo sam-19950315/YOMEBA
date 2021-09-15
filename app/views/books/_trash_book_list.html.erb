@@ -10,7 +10,7 @@
                 <%= book.book_subject %>
               </div>
               <div class="book_destroy">
-                <%= link_to '復活', trash_reverse_path(book.id), method: :post %>
+                <%= link_to '復活', trash_restore_path(book.id), method: :post %>
               </div>
             </div>
           </div>

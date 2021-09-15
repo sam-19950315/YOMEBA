@@ -1,10 +1,7 @@
 class ReadBookLogsController < ApplicationController
   require "date"
-<<<<<<< HEAD
+  
   before_action :authenticate_user!, only: [:create, :index, :genre_ranking, :graph]
-=======
-  before_action :authenticate_user!, only: [:create, :book_ranking]
->>>>>>> parent of 571cf31 (Merge pull request #25 from sam-19950315/バグ修正)
 
   def create
     ReadBookLog.create(user_id: current_user.id, book_id: params[:id], log: Date.today)

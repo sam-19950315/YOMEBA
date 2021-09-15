@@ -1,15 +1,21 @@
-
 <div class="book_registration_box">
   <h2 class="book_registration_name_top">新しい本の登録</h2>
   <%= form_with(model: @book, local: true) do |form| %>
     <div class="book_name_registration_box">
-      <%= form.text_field :book_subject , class: "book_input_size", placeholder: "本のタイトル" %>
+      <%= form.text_field :book_subject ,
+        class: "book_input_size", 
+        placeholder: "本のタイトル" 
+      %>
     </div>
-
     <div class="book_genre_registration_box">
-      <%= form.select :genre_id, Genre.where(user_id: current_user.id).map{ |genre| [genre.genre_name, genre.id]}, { include_blank: 'ジャンルを選んでください。希望のジャンルがない場合は、Topページから新規ジャンルの登録をしてください。'}, {class: "select_tab"}%>
+      <%= form.select :genre_id, 
+        Genre
+        .where(user_id: current_user.id)
+        .map{ |genre| [genre.genre_name, genre.id]}, 
+        { include_blank: 'ジャンルを選んでください。希望のジャンルがない場合は、Topページから新規ジャンルの登録をしてください。'}, 
+        {class: "select_tab"}
+      %>
     </div>
-
     <div class="book_name_registration_submit">
       <%= form.submit  "登録" , class: "book_name_submit"%>
     </div>

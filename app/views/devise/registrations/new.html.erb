@@ -8,14 +8,22 @@
   <div class="sign_up_box">
     <h2 class="sign_up_user_name_top">ユーザー登録</h2>
 
-    <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>      
+    <%= form_with model: @user, 
+      url: user_registration_path, 
+      id: 'new_user', 
+      class: 'new_user', 
+      local: true do |f| 
+    %>      
       <div class="field">
         <%= f.label :email %><br />
         <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
       </div>
 
       <div class="field">
-        <%= f.label :nickname %><br><em class="characters_minimum">(20 characters maximum)</em><br />
+        <%= f.label :nickname %><br>
+          <em class="characters_minimum">
+            (20 characters maximum)
+          </em><br />
         <%= f.text_field :nickname, autofocus: true,  maxlength: "20" %>
       </div>
 
@@ -29,14 +37,18 @@
       <div class="field">
         <%= f.label :password %>
         <% if @minimum_password_length %>
-        <em class="characters_minimum"><br>(<%= @minimum_password_length %> characters minimum)</em>
+          <em class="characters_minimum"><br>
+            (<%= @minimum_password_length %> characters minimum)
+          </em>
         <% end %><br />
         <%= f.password_field :password, autocomplete: "new-password" %>
       </div>
 
       <div class="field">
         <%= f.label :password_confirmation %><br />
-        <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+        <%= f.password_field :password_confirmation, 
+          autocomplete: "new-password" 
+        %>
       </div>
 
       <div class="actions">

@@ -6,7 +6,10 @@
   <div class="edit_user_info_space">
     <h2 class="edit_user_top">Edit <%= resource_name.to_s.humanize %></h2>
 
-    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+    <%= form_for(resource, as: resource_name,
+      url: registration_path(resource_name), 
+      html: { method: :put }) do |f| 
+    %>
       <%= render "devise/shared/error_messages", resource: resource %>
 
       <div class="field">
@@ -15,11 +18,17 @@
       </div>
 
       <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-        <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+        <div>
+          Currently waiting confirmation for: <%= resource.unconfirmed_email %>
+        </div>
       <% end %>
 
       <div class="field">
-        <%= f.label :nickname %> <i class="edit_user_comment">(20 characters maximum)</i><br />
+        <%= f.label :nickname %> 
+        <i class="edit_user_comment">
+          (20 characters maximum)
+        </i>
+        <br />
         <%= f.text_field :nickname, autofocus: true, maxlength: "20" %>
       </div>
 
@@ -31,22 +40,35 @@
       </div>
 
       <div class="field">
-        <%= f.label :password %> <i class="edit_user_comment"><br>(leave blank if you don't want to change it)</i><br />
+        <%= f.label :password %> 
+        <i class="edit_user_comment">
+        <br>(leave blank if you don't want to change it)
+        </i>
+        <br>
         <%= f.password_field :password, autocomplete: "new-password" %>
         <% if @minimum_password_length %>
           <br />
-          <em class="edit_user_comment"><%= @minimum_password_length %> characters minimum</em>
+          <em class="edit_user_comment">
+            <%= @minimum_password_length %> characters minimum
+          </em>
         <% end %>
       </div>
 
       <div class="field">
         <%= f.label :password_confirmation %><br />
-        <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+        <%= f.password_field :password_confirmation, 
+          autocomplete: "new-password" 
+        %>
       </div>
 
       <div class="field">
-        <%= f.label :current_password %> <i class="edit_user_comment"><br>(we need your current password to confirm your changes)</i><br />
-        <%= f.password_field :current_password, autocomplete: "current-password" %>
+        <%= f.label :current_password %> 
+        <i class="edit_user_comment">
+          <br>(we need your current password to confirm your changes)
+        </i><br />
+        <%= f.password_field :current_password, 
+          autocomplete: "current-password" 
+        %>
       </div>
 
       <div class="actions">
@@ -57,6 +79,13 @@
   </div>
   <div class="cancel_account">
     <h3 class="edit_user_comment">Cancel my account</h3>
-    <p class="edit_user_comment">Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+    <p class="edit_user_comment">
+      Unhappy? 
+      <%= button_to "Cancel my account", 
+      registration_path(resource_name), 
+      data: { confirm: "Are you sure?" }, 
+      method: :delete 
+      %>
+    </p>
   </div>
 </div>

@@ -37,7 +37,8 @@ RSpec.describe "genreの登録", type: :system do
       click_link '新規ジャンル'
       expect(current_path).to eq(new_genre_path)
       expect(page).to have_content('ログイン')
-      expect(page).to have_content('You need to sign in or sign up before continuing.')
+      expect(page)
+        .to have_content('You need to sign in or sign up before continuing.')
     end
   end
 end

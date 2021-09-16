@@ -15,7 +15,8 @@ RSpec.describe Genre, type: :model do
       it 'ジャンル名が空では投稿できない' do
         @genre.genre_name = ""
         @genre.valid?
-        expect(@genre.errors.full_messages).to include("Genre name can't be blank")
+        expect(@genre.errors.full_messages)
+          .to include("Genre name can't be blank")
       end     
       it 'ユーザーが紐付いていなければ投稿できない' do
         @genre.user = nil

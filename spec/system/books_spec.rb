@@ -44,7 +44,8 @@ RSpec.describe "本の登録", type: :system do
       visit root_path
       click_link '本の登録'
       expect(current_path).to eq(new_book_path)
-      expect(page).to have_content('You need to sign in or sign up before continuing.')
+      expect(page)
+        .to have_content('You need to sign in or sign up before continuing.')
     end
   end
 end

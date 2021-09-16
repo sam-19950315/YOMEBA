@@ -23,11 +23,13 @@ RSpec.describe "Toppages", type: :request do
       get root_path
       expect(response.body).to include("グラフ")
     end
-    it 'indexアクションにリクエストするとレスポンスに読んだ絵本ランキングに遷移するリンクが存在する' do
+    it 'indexアクションにリクエストするとレスポンスに読んだ絵本ランキングに遷移する
+      リンクが存在する' do
       get root_path
       expect(response.body).to include("読んだ絵本") 
     end
-    it 'indexアクションにリクエストするとレスポンスに読んだジャンルランキングに遷移するリンクが存在する' do 
+    it 'indexアクションにリクエストするとレスポンスに読んだジャンルランキングに
+      遷移するリンクが存在する' do 
       get root_path
       expect(response.body).to include("読んだジャンル")
     end
@@ -39,11 +41,13 @@ RSpec.describe "Toppages", type: :request do
       get root_path
       expect(response.body).to include("ログイン")
     end
-    it 'indexアクションにリクエストするとレスポンスにサインアップページに遷移するリンクが存在する' do 
+    it 'indexアクションにリクエストするとレスポンスにサインアップページに
+      遷移するリンクが存在する' do 
       get root_path
       expect(response.body).to include("サインアップ")
     end
-    it 'indexアクションにリクエストするとレスポンスにアプリのroot_pathに遷移するリンクが存在する' do 
+    it 'indexアクションにリクエストするとレスポンスにアプリのroot_pathに
+      遷移するリンクが存在する' do 
       get root_path
       expect(response.body).to include("YOMEBA")
     end

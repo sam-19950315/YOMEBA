@@ -9,7 +9,7 @@ class GenresController < ApplicationController
     if @genre.save
       redirect_to root_path
     else
-      flash.now[:error_genre] = "ジャンルの内容は必須です。"
+      flash.now[:error_genre] = CREATE_GENRE_VALIDATION_ERROR
       render :new
     end
   end

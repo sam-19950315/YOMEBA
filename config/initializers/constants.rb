@@ -1,2 +1,3 @@
 CREATE_BOOK_VALIDATION_ERROR =  "タイトル、ジャンルは必須です。"
 CREATE_GENRE_VALIDATION_ERROR = "ジャンルの内容は必須です。"
+BOOK_INVALID_ERROR = "本が見つかりません。"

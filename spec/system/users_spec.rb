@@ -149,7 +149,8 @@ RSpec.describe '退会をする', type: :system do
       click_button 'Cancel my account'
       page.accept_confirm "Are you sure?"
       expect(current_path).to eq(root_path)
-      expect(page).to have_content('Bye! Your account has been successfully cancelled. ')
+      expect(page)
+        .to have_content('Bye! Your account has been successfully cancelled. ')
     end
   end
 end

@@ -15,17 +15,20 @@ RSpec.describe ReadBookLog, type: :model do
       it 'Logが空では投稿できない' do
         @read_book_log.log = ""
         @read_book_log.valid?
-        expect(@read_book_log.errors.full_messages).to include("Log can't be blank")
+        expect(@read_book_log.errors.full_messages)
+          .to include("Log can't be blank")
       end     
       it 'ユーザーが紐付いていなければ投稿できない' do
         @read_book_log.user = nil
         @read_book_log.valid?
-        expect(@read_book_log.errors.full_messages).to include("User must exist")
+        expect(@read_book_log.errors.full_messages)
+          .to include("User must exist")
       end
       it '本が紐付いていなければ投稿できない' do
         @read_book_log.book = nil
         @read_book_log.valid?
-        expect(@read_book_log.errors.full_messages).to include("Book must exist")
+        expect(@read_book_log.errors.full_messages)
+          .to include("Book must exist")
       end
     end
   end

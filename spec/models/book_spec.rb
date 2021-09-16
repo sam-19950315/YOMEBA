@@ -15,7 +15,8 @@ RSpec.describe Book, type: :model do
       it '本のタイトルが空では投稿できない' do
         @book.book_subject = ""
         @book.valid?
-        expect(@book.errors.full_messages).to include("Book subject can't be blank")
+        expect(@book.errors.full_messages)
+          .to include("Book subject can't be blank")
       end     
       it 'ジャンル名が空では投稿できない' do
         @book.genre = nil

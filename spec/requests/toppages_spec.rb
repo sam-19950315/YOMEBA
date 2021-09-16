@@ -9,43 +9,43 @@ RSpec.describe "Toppages", type: :request do
     end
     it 'indexアクションにリクエストするとレスポンスに本棚に遷移するリンクが存在する' do 
       get root_path
-      expect(response.body).to include("href=\"/books\">本棚")
+      expect(response.body).to include("本棚")
     end
     it 'indexアクションにリクエストするとレスポンスに本の登録ページに遷移するリンクが存在する' do 
       get root_path
-      expect(response.body).to include("href=\"/books/new\">本の登録")
+      expect(response.body).to include("本の登録")
     end
     it 'indexアクションにリクエストするとレスポンスに新規ジャンル作成に遷移するリンクが存在する' do 
       get root_path
-      expect(response.body).to include("href=\"/genres/new\">\n          新規ジャンル")
+      expect(response.body).to include("新規ジャンル")
     end
     it 'indexアクションにリクエストするとレスポンスにグラフに遷移するリンクが存在する' do 
       get root_path
-      expect(response.body).to include("href=\"/read_book_log_graph\">グラフ")
+      expect(response.body).to include("グラフ")
     end
     it 'indexアクションにリクエストするとレスポンスに読んだ絵本ランキングに遷移するリンクが存在する' do
       get root_path
-      expect(response.body).to include("href=\"/read_book_logs\">\n          読んだ絵本") 
+      expect(response.body).to include("読んだ絵本") 
     end
     it 'indexアクションにリクエストするとレスポンスに読んだジャンルランキングに遷移するリンクが存在する' do 
       get root_path
-      expect(response.body).to include("href=\"/read_book_log\">\n          読んだジャンル")
+      expect(response.body).to include("読んだジャンル")
     end
     it 'indexアクションにリクエストするとレスポンスにゴミ箱に遷移するリンクが存在する' do 
       get root_path
-      expect(response.body).to include("href=\"/book_trashes_box\">ゴミ箱")
+      expect(response.body).to include("ゴミ箱")
     end
     it 'indexアクションにリクエストするとログインページに遷移するリンクが存在する' do 
       get root_path
-      expect(response.body).to include("href=\"/users/sign_in\">ログイン")
+      expect(response.body).to include("ログイン")
     end
     it 'indexアクションにリクエストするとレスポンスにサインアップページに遷移するリンクが存在する' do 
       get root_path
-      expect(response.body).to include("href=\"/users/sign_up\">サインアップ")
+      expect(response.body).to include("サインアップ")
     end
     it 'indexアクションにリクエストするとレスポンスにアプリのroot_pathに遷移するリンクが存在する' do 
       get root_path
-      expect(response.body).to include("href=\"/\">YOMEBA")
+      expect(response.body).to include("YOMEBA")
     end
   end
 end

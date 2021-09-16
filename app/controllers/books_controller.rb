@@ -21,15 +21,19 @@ class BooksController < ApplicationController
   end
 
   def destroy
-    book = Book.find(params[:id])
-    book.destroy
-    redirect_to root_path
+    ActiveRecord::Base.transaction do
+      book = Book.find(params[:id])
+      book.destroy
+      redirect_to root_path
+    end
   end
 
   def trash
-    book = Book.find(params[:id])
-    book.update(is_deleted: true)
-    redirect_to root_path
+    ActiveRecord::Base.transaction do
+      book = Book.find(params[:id])
+      book.update(is_deleted: true)
+      redirect_to root_path
+    end
   end
 
   def trashes_box
@@ -37,9 +41,11 @@ class BooksController < ApplicationController
   end
 
   def recover_from_trashbox
-    book = Book.find(params[:id])
-    book.update(is_deleted: false)
-    redirect_to root_path
+    ActiveRecord::Base.transaction do
+      book = Book.find(params[:id])
+      book.update(is_deleted: false)
+      redirect_to root_path
+    end
   end
 
 

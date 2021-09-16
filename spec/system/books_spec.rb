@@ -182,7 +182,7 @@ RSpec.describe "本のカウントができる", type: :system do
     @book = Faker::Lorem.sentence
   end
   context '本のカウントができる' do 
-    it 'プラスボタンを押せば、read_book_logのレコードが増える。そして、book_indexページにredirectされる' do
+    it 'プラスボタンを押せば、book_indexページの本の下の数字が1増える' do
       visit new_user_session_path
       fill_in 'Email', with: @user.email
       fill_in 'Password', with: @user.password

@@ -15,7 +15,7 @@ class BooksController < ApplicationController
     if @book.save
       redirect_to root_path
     else  
-      flash.now[:error_book] = "タイトル、ジャンルは必須です。"
+      flash.now[:error_book] = CREATE_BOOK_VALIDATION_ERROR
       render :new
     end
   end

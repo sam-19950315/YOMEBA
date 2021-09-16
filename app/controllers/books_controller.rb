@@ -23,18 +23,29 @@ class BooksController < ApplicationController
   def destroy
     ActiveRecord::Base.transaction do
       book = Book.find(params[:id])
-      book.destroy
+      if book.valid?
+        book.destroy
+        redirect_to root_path
+      else
+        flash.now[:error_book] = BOOK_INVALID_ERROR
+        render :destroy
+      end
     end
-    redirect_to root_path
+
 
   end
 
   def trash
     ActiveRecord::Base.transaction do
       book = Book.find(params[:id])
-      book.update(is_deleted: true)
+      if book.valid?
+        book.update(is_deleted: true)
+        redirect_to root_path
+      else
+        flash.now[:error_book] = BOOK_INVALID_ERROR
+        render :trash
+      end
     end
-    redirect_to root_path
   end
 
   def trashes_box
@@ -42,14 +53,17 @@ class BooksController < ApplicationController
   end
 
   def recover_from_trashbox
-    ActiveRecord::Base.transaction do
+    ActiveRecord::Base.transaction do      
       book = Book.find(params[:id])
-      book.update(is_deleted: false)
+      if book.valid?
+        book.update(is_deleted: false)
+        redirect_to root_path
+      else
+        flash.now[:error_book] = BOOK_INVALID_ERROR
+        render :recover_from_trashbox
+      end
     end
-    redirect_to root_path
-
   end
-
 
   private
 

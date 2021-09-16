@@ -95,6 +95,8 @@
 
 .book_image {
   position: relative;
+  margin-bottom: 0px;
+  margin-top: 5vh;
 }
 
 .book_subject {
@@ -121,7 +123,8 @@
 
 .book_count_space {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
 }
 
 .book_count_result {
@@ -236,4 +239,8 @@
 .trash_book_list {
   background-color: #795548;
   height: 85vh;
+}
+
+.count_button_plus {
+  align-items: center;
 }

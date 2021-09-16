@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
   before_action :authenticate_user!, 
-    only: [:index, :new, :create, :destroy, :trash]
+    only: [:index, :new, :create, :destroy, :trash, :trashes_box, :recover_from_trashbox]
 
   def index
     @books = Book.where(user_id: current_user.id,is_deleted: false)

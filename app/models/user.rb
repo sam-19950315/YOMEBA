@@ -6,6 +6,9 @@ class User < ApplicationRecord
   belongs_to :genre, optional: true, dependent: :destroy
   has_many :books, dependent: :destroy
   has_many :read_book_logs, dependent: :destroy
+
+  validates :nickname, presence: true, length: { maximum: 20 }
+
   
   def soft_delete  
     update_attribute(:deleted_at, Time.current)  

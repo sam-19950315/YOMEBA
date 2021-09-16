@@ -13,6 +13,7 @@ class BooksController < ApplicationController
   def create
     @book = Book.new(book_params)
     if @book.save
+      flash[:success_book_registration] = CREATE_BOOK_SUCCESS
       redirect_to root_path
     else  
       flash.now[:error_book] = CREATE_BOOK_VALIDATION_ERROR
@@ -25,6 +26,7 @@ class BooksController < ApplicationController
       book = Book.find(params[:id])
       if book.valid?
         book.destroy
+        flash[:success_book_destroy] = BOOK_DESTROY_SUCCESS
         redirect_to root_path
       else
         flash.now[:error_book] = BOOK_INVALID_ERROR
@@ -40,6 +42,7 @@ class BooksController < ApplicationController
       book = Book.find(params[:id])
       if book.valid?
         book.update(is_deleted: true)
+        flash[:success_book_trash] = BOOK_TRUSH_SUCCESS
         redirect_to root_path
       else
         flash.now[:error_book] = BOOK_INVALID_ERROR

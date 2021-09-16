@@ -26,7 +26,7 @@
                 <h1 class="count_result"><%= book.read_book_logs.count %></h1>
               </div>
               <div class="count_button_plus">
-                <%= link_to image_tag("/images/plus.png", class: 'count_button' )  , 
+                <%= link_to image_tag("/images/plus.png", class: 'count_button', alt: "プラスボタン" )  , 
                   create_read_book_log_path(book.id), 
                   method: :POST 
                 %>

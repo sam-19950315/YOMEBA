@@ -2,6 +2,11 @@ class ReadBookLogsController < ApplicationController
   require "date"
   before_action :authenticate_user!, only: [:create, :index, :genre_ranking, :graph]
 
+  DEFAULT_BOOK_LOG_NUM = 5
+  DEFAULT_GENRE_RANK_NUM = 5
+  BOOL_LOG_PERIOD = 30
+
+
   def create
     ReadBookLog.create(
       user_id: current_user.id, 
@@ -20,7 +25,7 @@ class ReadBookLogsController < ApplicationController
     .group("genres.genre_name")
     .order('count_all DESC')
     .count
-    .first(5)
+    .first(DEFAULT_BOOK_LOG_NUM)
   end
 
   def genre_ranking
@@ -31,7 +36,7 @@ class ReadBookLogsController < ApplicationController
     .group("genres.genre_name")
     .order('count_all DESC')
     .count
-    .first(5)
+    .first(DEFAULT_GENRE_RANK_NUM)
   end
 
   def graph
@@ -40,7 +45,7 @@ class ReadBookLogsController < ApplicationController
     .select(:log)
     .group("read_book_logs.log")
     .count
-    .first(30)
+    .first(BOOL_LOG_PERIOD)
 
   end
 

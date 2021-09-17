@@ -11,15 +11,19 @@ RUN apt-get update -qq && apt-get install -y nodejs yarn npm \
   && n 12.13.0 \
   && echo "export PATH=/usr/local/n/versions/node/12.13.0/bin/:$PATH" >> ~/.bashrc \ 
   && source ~/.bashrc
-
 RUN mkdir /YOMEBA
-
 WORKDIR /YOMEBA
+COPY Gemfile /YOMEBA/Gemfile
+COPY Gemfile.lock /YOMEBA/Gemfile.lock
+RUN gem install bundler && bundle install
+COPY . /YOMEBA
 
-ADD Gemfile /YOMEBA/Gemfile
-ADD Gemfile.lock /YOMEBA/Gemfile.lock
+RUN yarn install --check-files
+RUN bundle exec rails webpacker:compile
 
-RUN gem install bundler
-RUN bundle install
+COPY entrypoint.sh /usr/bin/
+RUN chmod +x /usr/bin/entrypoint.sh
+ENTRYPOINT ["entrypoint.sh"]
+EXPOSE 3000
 
-ADD . /YOMEBA
+CMD ["rails", "server", "-b", "0.0.0.0"]

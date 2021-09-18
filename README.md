@@ -1,8 +1,5 @@
 # YOMEBA
 絵本の記録・集計アプリ
-## test-user-account
-ID:test@gmail.com
-Pass:password
 # 本アプリ作成への想い
 ## 目的
 親の考える理想の子育てにマッチする絵本を提案することで、子どもの教育に貢献する。
@@ -14,15 +11,12 @@ Pass:password
 * 使用言語:ruby (version:2.6.5)
 * DB:Mysql(ver:5.6.51)
 * フレームワーク:Ruby on Rails(version:6.0.4)
-* 仮想空間:Docker
-* OS:AmazonLinux2
-* プロジェクト管理:git
 * テスト:Rspec,capybara
-* エディタ:VSCode
 # Local環境構築手順(仮想空間Dockerによる)
 * ローカルにGitからコードをクローン
-* gitからクローンしたディレクトリにて、下記作業を行う
+* GitHubからクローンしたディレクトリにて、下記作業を行う
 * docker-compose build
 * docker-compose run web rails db:create
+* docker-compose run web rails db:migrate RAILS_ENV=development
 * docker-compose run web rails webpacker:install 
 * docker-compose up -d

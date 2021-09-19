@@ -15,8 +15,7 @@
 # Local環境構築手順(仮想空間Dockerによる)
 * ローカルにGitからコードをクローン
 * GitHubからクローンしたディレクトリにて、下記作業を行う
-* docker-compose build
-* docker-compose run web rails db:create
-* docker-compose run web rails db:migrate RAILS_ENV=development
-* docker-compose run web rails webpacker:install 
 * docker-compose up -d
+* docker-compose exec app bin/rails db:create
+* docker-compose exec app bin/rails db:migrate
+* docker-compose exec app bin/rails webpacker:install

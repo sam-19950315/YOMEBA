@@ -16,6 +16,6 @@
 * ローカルにGitからコードをクローン
 * GitHubからクローンしたディレクトリにて、下記作業を行う
 * docker-compose up -d
-* docker-compose exec app bin/rails db:create
-* docker-compose exec app bin/rails db:migrate
-* docker-compose exec app bin/rails webpacker:install
+* docker-compose exec web bin/rails db:create
+* docker-compose exec web bin/rails db:migrate
+* docker-compose exec web bin/rails webpacker:install

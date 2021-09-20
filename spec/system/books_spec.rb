@@ -43,7 +43,7 @@ RSpec.describe "本の登録", type: :system do
     it 'サインしていなければ、本の登録ができずにログインページに遷移する' do
       visit root_path
       click_link '本の登録'
-      expect(current_path).to eq(new_book_path)
+      expect(current_path).to eq(new_user_session_path)
       expect(page)
         .to have_content('You need to sign in or sign up before continuing.')
     end
@@ -83,7 +83,7 @@ RSpec.describe "本の一覧表示", type: :system do
       fill_in 'Password', with: @user.password
       find('input[name="commit"]').click
       click_link '本棚'
-      expect(page).to have_content("1冊目の本を\n登録しよう！")
+      expect(page).to have_content("1冊目の本を 登録しよう！")
       expect(current_path).to eq(books_path)
     end
   end

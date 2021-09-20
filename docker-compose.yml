@@ -11,6 +11,14 @@ services:
     ports:
       - "3306:3306"
 
+  test-db:
+    image: mysql:5.6
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: YOMEBA_ver_1_test
+    ports:
+      - '3307:3306'
+      
   web:
     build: .
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"

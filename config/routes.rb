@@ -14,7 +14,9 @@ Rails.application.routes.draw do
   get 'read_book_log_graph' => 'read_book_logs#graph', 
     as: 'index_graph'
   post 'books/:id' => 'books#trash', 
-    as: 'trash_book'
+    as: 'trash_book'  
+  get 'books_search' => 'books#search', 
+    as: 'books_search'
   get 'book_trashes_box' => 'books#trashes_box',
     as: 'trashes_box'
   post 'book_trashes_restore/:id' => 'books#recover_from_trashbox', 

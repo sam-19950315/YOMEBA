@@ -1,10 +1,17 @@
 <div class="book_registration_box">
   <h2 class="book_registration_name_top">新しい本の登録</h2>
+  <%= form_with url: new_book_path, method: :get, local: true do |f| %>
+    <%= f.text_field :keyword, class: "search_form" %>
+    <%= f.submit '表示させたい表紙を検索', class: "search_btn" %>
+      <% if @books.present? %>
+        <%= render 'search_result' %>
+      <% end %>
+  <% end %>
   <%= form_with(model: @book, local: true) do |form| %>
     <div class="book_name_registration_box">
       <%= form.text_field :book_subject ,
         class: "book_input_size", 
-        placeholder: "本のタイトル" 
+        placeholder: "本のタイトル(検索をし、表示させたい表紙のタイトルを入力してください。)" 
       %>
     </div>
     <div class="book_genre_registration_box">

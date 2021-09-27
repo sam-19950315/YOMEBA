@@ -95,9 +95,13 @@
 
 .book_image {
   position: relative;
+  width: 330px;
+  height: 406.250px;
   margin-bottom: 0px;
   margin-top: 5vh;
 }
+
+
 
 .book_subject {
   width: 11vw;
@@ -117,7 +121,7 @@
 
 .book_destroy {
   position: absolute;
-  top: 70%;
+  top: 90%;
   left: 25%;
 }
 
@@ -201,9 +205,11 @@
 
 .book_registration_box {
   width: 50vw;
-  height: 60vh;
+  height: 75vh;
   text-align: center;
   border: 4px solid #5D4037;
+  overflow: scroll;
+
 }
 
 .book_registration_name_top {
@@ -243,4 +249,44 @@
 
 .count_button_plus {
   align-items: center;
+}
+
+.book_original_image {
+  width: 11vw;
+  position: absolute;
+  top: 60%;
+  left: 47%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
+  font-size: 1.5rem;
+  color: white;
+  background-color:#5D4037 ;
+  text-align: center;
+}
+.image_result {
+  display: flex;
+  overflow-y: scroll;
+  height: 30vh;
+}
+
+.book_image_title {
+  display: block;
+  color: white;
+
+}
+
+.book_images {
+  width: 7vw;
+  height: 15vh;
+}
+
+.book_images_result {
+  margin-left: 20px;
+}
+
+.book_input_size::placeholder {
+  font-size: 20px;
 }
